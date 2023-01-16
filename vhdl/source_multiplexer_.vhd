@@ -48,6 +48,6 @@ entity source_multiplexer is
         pat2_rgb_i  :  in   std_logic_vector(11 downto 0);  -- rgb values
         mem1_rgb_i  :  in   std_logic_vector(11 downto 0);  -- rgb values
         mem2_rgb_i  :  in   std_logic_vector(11 downto 0);  -- rgb values
-        rgb_o       :  out  std_logic_vector(11 downto 0)   -- rgb value output
+        rgb_o       :  out  std_logic_vector(11 downto 0)   -- rgb output
         );																		
 end source_multiplexer;

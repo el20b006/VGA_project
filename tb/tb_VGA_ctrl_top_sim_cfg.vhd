@@ -4,22 +4,22 @@
 --  
 -------------------------------------------------------------------------------
 --                                                                      
--- ENTITY:         pattern_gen_2
+-- ENTITY:         VGA_ctrl_top_ctrl
 --
--- FILENAME:       pattern_gen_2_.vhd
+-- FILENAME:       tb_VGA_ctrl_top_sim_cfg.vhd
 -- 
--- ARCHITECTURE:   rtl
+-- ARCHITECTURE:   sim
 -- 
--- ENGINEER:       Sarah FrÃ¶ler
+-- ENGINEER:       Sarah Fröler
 --
--- DATE:           21. November 2022
+-- DATE:           16. January 2022
 --
 -- VERSION:        1.0
 --
 -------------------------------------------------------------------------------
 --                                                                      
--- DESCRIPTION:    This is the entity declaration of the pattern_gen_2
---                 submodule of the VGA Controller VHDL project.
+-- DESCRIPTION:    This is the configuration for the VGA_crtl_top testbench
+--                 of the VGA Controller VHDL project.
 --
 --
 -------------------------------------------------------------------------------
@@ -35,15 +35,13 @@
 -- CHANGES:        Version 1.0
 --
 -------------------------------------------------------------------------------
-
 library IEEE;
 use IEEE.std_logic_1164.all;
 
-entity pattern_gen_2 is
-  port (clk_i    :  in   std_logic;                     -- system clock
-        reset_i  :  in   std_logic;                     -- reset
-        pixel_i  :  in   std_logic_vector(9 downto 0);  -- pixel counter
-        line_i   :  in   std_logic_vector(9 downto 0);  -- line counter
-        rgb_o    :  out  std_logic_vector(11 downto 0)  -- rgb output
-		);
-end pattern_gen_2;
+configuration tb_VGA_ctrl_top_sim_cfg of tb_VGA_ctrl_top is
+  for sim
+    for i_VGA_ctrl_top : VGA_ctrl_top
+      use configuration work.VGA_ctrl_top_struc_cfg;
+    end for;
+  end for;
+end tb_VGA_ctrl_top_sim_cfg;

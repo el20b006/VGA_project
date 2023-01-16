@@ -54,6 +54,8 @@ begin
 		h_sync_o <= '0';
 		pixel_o  <= "0000000001";
 		line_o   <= "0000000001";
+		v_count  <= "0000000001";
+		h_count  <= "0000000001";
 		rgb_o    <= "000000000000";
 	
       elsif clk_i 'event and clk_i = '1' then

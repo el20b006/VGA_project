@@ -4,22 +4,22 @@
 --  
 -------------------------------------------------------------------------------
 --                                                                      
--- ENTITY:         pattern_gen_2
+-- ENTITY:         VGA_ctrl_top
 --
--- FILENAME:       pattern_gen_2_.vhd
+-- FILENAME:       VGA_ctrl_top_.vhd
 -- 
--- ARCHITECTURE:   rtl
+-- ARCHITECTURE:   struc
 -- 
--- ENGINEER:       Sarah FrÃ¶ler
+-- ENGINEER:       Sarah Fröler
 --
--- DATE:           21. November 2022
+-- DATE:           16. January 2023
 --
 -- VERSION:        1.0
 --
 -------------------------------------------------------------------------------
 --                                                                      
--- DESCRIPTION:    This is the entity declaration of the pattern_gen_2
---                 submodule of the VGA Controller VHDL project.
+-- DESCRIPTION:    This is the entity declaration of the VGA_ctrl_top of the
+--                 VGA Controller VHDL project.
 --
 --
 -------------------------------------------------------------------------------
@@ -38,12 +38,15 @@
 
 library IEEE;
 use IEEE.std_logic_1164.all;
-
-entity pattern_gen_2 is
-  port (clk_i    :  in   std_logic;                     -- system clock
-        reset_i  :  in   std_logic;                     -- reset
-        pixel_i  :  in   std_logic_vector(9 downto 0);  -- pixel counter
-        line_i   :  in   std_logic_vector(9 downto 0);  -- line counter
-        rgb_o    :  out  std_logic_vector(11 downto 0)  -- rgb output
+																				
+entity VGA_ctrl_top is
+  port (clk_i     :  in  std_logic;                      -- system clock
+        reset_i   :  in  std_logic;                      -- reset
+        sw_i      :  in  std_logic_vector(15 downto 0);  -- connection switches
+        pb_i      :  in  std_logic_vector(3 downto 0);   -- connection buttons
+        h_sync_o  :  out  std_logic;                     -- h_sync for monitor
+        v_sync_o  :  out  std_logic;                     -- v_sync for monitor
+		rgb_o     :  out  std_logic_vector(11 downto 0)  -- rgb output
 		);
-end pattern_gen_2;
+end VGA_ctrl_top;
+

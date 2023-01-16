@@ -42,6 +42,6 @@ use IEEE.std_logic_1164.all;
 entity prescaler is
   port (clk_i         :  in	  std_logic;    -- system clock
         reset_i       :  in	  std_logic;    -- reset
-        enable_25M_o  :  out  std_logic     -- enable signal with 25MHz
+        enable_25M_o  :  out  std_logic     -- enable signal 25MHz
         );
 end prescaler;

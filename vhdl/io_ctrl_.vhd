@@ -40,12 +40,12 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 
 entity io_ctrl is
-  port (clk_i    :  in   std_logic;                      -- system clock 100MHz
+  port (clk_i    :  in   std_logic;                      -- system clock
         reset_i  :  in   std_logic;                      -- reset
-        sw_i     :  in   std_logic_vector(15 downto 0);  -- state switch 0-15
-        pb_i     :  in   std_logic_vector(3 downto 0);   -- state button 0-3
-        swsync_o :  out  std_logic_vector(15 downto 0);  -- state debounced switches
-        pbsync_o :  out  std_logic_vector(3 downto 0)    -- state debounced button
+        sw_i     :  in   std_logic_vector(15 downto 0);  -- switch 0-15
+        pb_i     :  in   std_logic_vector(3 downto 0);   -- button 0-3
+        swsync_o :  out  std_logic_vector(15 downto 0);  -- debounced switches
+        pbsync_o :  out  std_logic_vector(3 downto 0)    -- debounced buttons
        );
 end io_ctrl;
 

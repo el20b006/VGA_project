@@ -40,3 +40,17 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
+
+architecture rtl of mem_ctrl_1 is
+
+begin
+  p_memory : process(clk_i, reset_i)
+    begin
+      if reset_i = '1' then
+        rgb_o  <= "000000000000";   -- all colors 0
+	
+	  elsif clk_i 'event and clk_i = '1' then
+	    rgb_o  <= "111111111111";
+	  end if;
+	end process;
+end rtl;
