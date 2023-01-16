@@ -158,7 +158,6 @@ begin
 	wait;
   end process;
   
-  
   p_lines : process
   begin
     line_i <= "0000000000";   -- black
@@ -170,10 +169,6 @@ begin
 	line_i <= "0111101101";   -- black
 	wait for 40 ns;
 	line_i <= "1000001100";   -- black
-	wait for 40 ns;
-	
-	
-	
 	wait;
   end process;
  

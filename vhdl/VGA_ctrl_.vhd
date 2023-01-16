@@ -48,6 +48,6 @@ entity VGA_ctrl is
         h_sync_o      :  out  std_logic;                      -- horizontal sync
         pixel_o       :  out  std_logic_vector(9 downto 0);   -- pixel output
         line_o        :  out  std_logic_vector(9 downto 0);   -- pixel line  
-		rgb_o         :  out  std_logic_vector(11 downto 0);  -- output rgb 
+		rgb_o         :  out  std_logic_vector(11 downto 0)  -- output rgb 
 		);
 end VGA_ctrl;

@@ -66,7 +66,7 @@ begin
 	 );
 	
 	
-  p_clk	: process
+  p_clk : process
   begin
     clk_i <= '0';
     wait for 5 ns;
