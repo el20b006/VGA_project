@@ -49,45 +49,43 @@ begin
         rgb_o   <= "000000000000";   -- all colors 0
 
       elsif clk_i 'event and clk_i = '1' then	
-        if line_i < "0000001101" or line_i > "0111101100" then
+        if line_i < "0000100011" or line_i > "1000000011" then  
 		  rgb_o <= "000000000000";
-		elsif pixel_i < "0000111001" or pixel_i > "1011110000" then
+		elsif pixel_i < "0010010000" or pixel_i > "1011100111" then 
 		  rgb_o <= "000000000000";
 		  
-		elsif pixel_i > "0011101000" and pixel_i < "0100010001" then
+		elsif pixel_i > "0100000111" and pixel_i < "0100110000" then
 		  rgb_o <= "000000000000";   -- all colors 0
-		elsif pixel_i > "0110001000" and pixel_i < "0110110001" then
+		elsif pixel_i > "0110100111" and pixel_i < "0111010000" then
 		  rgb_o <= "000000000000";   -- all colors 0
-		elsif pixel_i > "1000101000" and pixel_i < "1001010001" then
+		elsif pixel_i > "1001000111" and pixel_i < "1001110000" then
 		  rgb_o <= "000000000000";   -- all colors 0
-		elsif pixel_i > "1011001000" and pixel_i < "1011110001" then
-		  rgb_o <= "000000000000";   -- all colors 0 
 			   
-		elsif pixel_i > "0001110000" and pixel_i < "0010011001" then
+		elsif pixel_i > "0010001111" and pixel_i < "0010111000" then
           rgb_o <= "111100000000";   -- red 1, others 0 
-		elsif pixel_i > "0100010000" and pixel_i < "0100111001" then 
+		elsif pixel_i > "0100101111" and pixel_i < "0101011000" then 
 		  rgb_o <= "111100000000";   -- red 1, others 0 
-		elsif pixel_i > "0110110000" and pixel_i < "0111011001" then
+		elsif pixel_i > "0111001111" and pixel_i < "0111111000" then
 		  rgb_o <= "111100000000";   -- red 1, others 0 
-		elsif pixel_i > "1001010000" and pixel_i < "1001111001" then
+		elsif pixel_i > "1001101111" and pixel_i < "1010011000" then
 		  rgb_o <= "111100000000";   -- red 1, others 0 
 			  
-		elsif pixel_i > "0010011000" and pixel_i < "0011000001" then
+		elsif pixel_i > "0010110111" and pixel_i < "0011100000" then
 		  rgb_o <= "000011110000";   -- green 1, others 0 
-		elsif pixel_i > "0100111000" and pixel_i < "0101100001" then
+		elsif pixel_i > "0101010111" and pixel_i < "0110000000" then
 		  rgb_o <= "000011110000";   -- green 1, others 0 
-		elsif pixel_i > "0111011000" and pixel_i < "1000000001" then
+		elsif pixel_i > "0111110111" and pixel_i < "1000100000" then
 		  rgb_o <= "000011110000";   -- green 1, others 0 
-		elsif pixel_i > "1001111000" and pixel_i < "1010100001" then
+		elsif pixel_i > "1010010111" and pixel_i < "1011000000" then
 		  rgb_o <= "000011110000";   -- green 1, others 0 
 			  
-		elsif pixel_i > "0011000000" and pixel_i < "0011101001" then		
+		elsif pixel_i > "0011011111" and pixel_i < "0100001000" then		
           rgb_o <= "000000001111";   -- blue 1, others 0
-		elsif pixel_i > "0101100000" and pixel_i < "0110001001" then
+		elsif pixel_i > "0101111111" and pixel_i < "0110101000" then
 		  rgb_o <= "000000001111";   -- blue 1, others 0
-		elsif pixel_i > "1000000000" and pixel_i < "1000101001" then		
+		elsif pixel_i > "1000011111" and pixel_i < "1001001000" then		
           rgb_o <= "000000001111";   -- blue 1, others 0
-		elsif pixel_i > "1010100000" and pixel_i < "1011001001" then
+		elsif pixel_i > "1011011111" and pixel_i < "1011101000" then
 		  rgb_o <= "000000001111";   -- blue 1, others 0   
 		end if;				
 	  end if;
