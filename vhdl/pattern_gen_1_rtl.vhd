@@ -49,7 +49,7 @@ begin
         rgb_o   <= "000000000000";   -- all colors 0
 
       elsif clk_i 'event and clk_i = '1' then	
-        if line_i < "0000100011" or line_i > "1000000011" then  
+        if line_i < "0000100011" or line_i > "1000000010" then  
 		  rgb_o <= "000000000000";
 		elsif pixel_i < "0010010000" or pixel_i > "1011100111" then 
 		  rgb_o <= "000000000000";

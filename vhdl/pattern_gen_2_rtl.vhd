@@ -53,7 +53,7 @@ begin
         if line_i < "0000100011" or line_i > "1000000011" then
 		  rgb_o   <= "000000000000";
 		  
-	    elsif pixel_i < "0010010000" or pixel_i > "1100001111" then
+	    elsif pixel_i < "0010010000" or pixel_i > "1100001110" then
 		  rgb_o   <= "000000000000"; 
 		  
 		-- r-g-b line 1
