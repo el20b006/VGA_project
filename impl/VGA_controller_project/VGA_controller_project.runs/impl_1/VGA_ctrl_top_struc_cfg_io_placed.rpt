@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
-| Date         : Thu Jan 19 18:27:12 2023
+| Date         : Fri Jan 20 18:33:38 2023
 | Host         : DESKTOP-7DLC06A running 64-bit major release  (build 9200)
 | Command      : report_io -file VGA_ctrl_top_struc_cfg_io_placed.rpt
 | Design       : VGA_ctrl_top_struc_cfg

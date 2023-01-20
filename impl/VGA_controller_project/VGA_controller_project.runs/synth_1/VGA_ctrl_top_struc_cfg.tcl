@@ -22,16 +22,16 @@ set_property used_in_implementation false [get_files {{c:/Users/sarah/OneDrive/D
 add_files -quiet {{c:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.srcs/sources_1/ip/rom2/rom2.dcp}}
 set_property used_in_implementation false [get_files {{c:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.srcs/sources_1/ip/rom2/rom2.dcp}}]
 read_vhdl -library xil_defaultlib {
-  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/source_multiplexer_.vhd}
   {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/mem_ctrl_2_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/source_multiplexer_.vhd}
   {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/mem_ctrl_1_.vhd}
   {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/prescaler_.vhd}
   {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/pattern_gen_2_.vhd}
   {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/pattern_gen_1_.vhd}
   {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/io_ctrl_.vhd}
   {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/VGA_ctrl_.vhd}
-  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/source_multiplexer_rtl.vhd}
   {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/mem_ctrl_2_rtl.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/source_multiplexer_rtl.vhd}
   {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/mem_ctrl_1_rtl.vhd}
   {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/VGA_ctrl_top_.vhd}
   {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/prescaler_rtl.vhd}

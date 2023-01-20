@@ -65,9 +65,12 @@ architecture struc of VGA_ctrl_top is
     port(clk_i         :  in   std_logic;                     -- system clock
          reset_i       :  in   std_logic;                     -- reset
 		 enable_25M_i  :  in   std_logic;                     -- 25M enable 
-	     count_i       :  in   std_logic_vector(13 downto 0); -- count input
          pixel_i       :  in   std_logic_vector(9 downto 0);  -- pixel counter
          line_i        :  in   std_logic_vector(9 downto 0);  -- line counter
+		 pixel_beg_i   :  in   std_logic_vector(9 downto 0);
+		 pixel_end_i   :  in   std_logic_vector(9 downto 0);
+		 line_beg_i    :  in   std_logic_vector(9 downto 0);
+		 line_end_i    :  in   std_logic_vector(9 downto 0);
          rgb_o         :  out  std_logic_vector(11 downto 0)  -- rgb output
 	    );
   end component;
@@ -109,7 +112,10 @@ architecture struc of VGA_ctrl_top is
          mem1_rgb_i  :  in   std_logic_vector(11 downto 0);  -- rgb values
          mem2_rgb_i  :  in   std_logic_vector(11 downto 0);  -- rgb values
          rgb_o       :  out  std_logic_vector(11 downto 0);  -- rgb output
-		 count_o     :  out  std_logic_vector(13 downto 0)   -- count output
+		 pixel_beg_o :  out  std_logic_vector(9 downto 0);
+		 pixel_end_o :  out  std_logic_vector(9 downto 0);
+		 line_beg_o  :  out  std_logic_vector(9 downto 0);
+		 line_end_o :  out  std_logic_vector(9 downto 0)
         );	
   end component;
   
@@ -139,7 +145,10 @@ architecture struc of VGA_ctrl_top is
   signal s_pixel_count :  std_logic_vector(9 downto 0);   -- pixel counter
   signal s_line_count  :  std_logic_vector(9 downto 0);   -- line counter
   signal s_rgb         :  std_logic_vector(11 downto 0);  -- multiplexed rgb
-  signal s_move_count  :  std_logic_vector(13 downto 0);  -- move counter
+  signal s_pixel_beg   :  std_logic_vector(9 downto 0);
+  signal s_pixel_end   :  std_logic_vector(9 downto 0);
+  signal s_line_beg    :  std_logic_vector(9 downto 0);
+  signal s_line_end    :  std_logic_vector(9 downto 0);
   
   
 begin
@@ -173,7 +182,10 @@ begin
 	 enable_25M_i => s_enable_25M,
 	 pixel_i      => s_pixel_count,
 	 line_i       => s_line_count,
-	 count_i      => s_move_count,
+	 line_beg_i   => s_line_beg,
+	 line_end_i   => s_line_end,
+	 pixel_beg_i  => s_pixel_beg,
+	 pixel_end_i  => s_pixel_end,
 	 rgb_o        => s_mem2_rgb
     );
 
@@ -219,7 +231,10 @@ begin
 	 mem1_rgb_i  => s_mem1_rgb,
 	 mem2_rgb_i  => s_mem2_rgb,
 	 rgb_o       => s_rgb,
-	 count_o     => s_move_count
+	 line_beg_o  => s_line_beg,
+	 line_end_o  => s_line_end,
+	 pixel_beg_o => s_pixel_beg,
+	 pixel_end_o => s_pixel_end
     );
 	
   -- Instantiate the VGA_ctrl unit

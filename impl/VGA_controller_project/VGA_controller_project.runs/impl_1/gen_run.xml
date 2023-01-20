@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1674149187">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1674235971">
+  <File Type="OPT-DCP" Name="VGA_ctrl_top_struc_cfg_opt.dcp"/>
   <File Type="ROUTE-STATUS-PB" Name="VGA_ctrl_top_struc_cfg_route_status.pb"/>
   <File Type="PA-TCL" Name="VGA_ctrl_top_struc_cfg.tcl"/>
-  <File Type="OPT-DCP" Name="VGA_ctrl_top_struc_cfg_opt.dcp"/>
-  <File Type="INIT-TIMING" Name="VGA_ctrl_top_struc_cfg_timing_summary_init.rpt"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="VGA_ctrl_top_struc_cfg_methodology_drc_opted.rpt"/>
   <File Type="RDI-RDI" Name="VGA_ctrl_top_struc_cfg.vdi"/>
   <File Type="PWROPT-DRC" Name="VGA_ctrl_top_struc_cfg_drc_pwropted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="VGA_ctrl_top_struc_cfg_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="VGA_ctrl_top_struc_cfg_timing_summary_init.rpt"/>
   <File Type="OPT-DRC" Name="VGA_ctrl_top_struc_cfg_drc_opted.rpt"/>
   <File Type="PWROPT-DCP" Name="VGA_ctrl_top_struc_cfg_pwropt.dcp"/>
   <File Type="OPT-HWDEF" Name="VGA_ctrl_top_struc_cfg.hwdef"/>
@@ -31,8 +31,8 @@
   <File Type="ROUTE-DRC" Name="VGA_ctrl_top_struc_cfg_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="VGA_ctrl_top_struc_cfg_drc_routed.pb"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="VGA_ctrl_top_struc_cfg_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="VGA_ctrl_top_struc_cfg_methodology_drc_routed.pb"/>
   <File Type="BG-BIT" Name="VGA_ctrl_top_struc_cfg.bit"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="VGA_ctrl_top_struc_cfg_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR" Name="VGA_ctrl_top_struc_cfg_power_routed.rpt"/>
   <File Type="ROUTE-PWR-SUM" Name="VGA_ctrl_top_struc_cfg_power_summary_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="VGA_ctrl_top_struc_cfg_power_routed.rpx"/>
@@ -59,13 +59,13 @@
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../../vhdl/source_multiplexer_.vhd">
+    <File Path="$PPRDIR/../../vhdl/mem_ctrl_2_.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../vhdl/mem_ctrl_2_.vhd">
+    <File Path="$PPRDIR/../../vhdl/source_multiplexer_.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -107,13 +107,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../vhdl/source_multiplexer_rtl.vhd">
+    <File Path="$PPRDIR/../../vhdl/mem_ctrl_2_rtl.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../vhdl/mem_ctrl_2_rtl.vhd">
+    <File Path="$PPRDIR/../../vhdl/source_multiplexer_rtl.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>

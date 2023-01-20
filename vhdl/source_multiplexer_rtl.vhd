@@ -49,8 +49,7 @@ architecture rtl of source_multiplexer is
   signal s_pixel_beg  : unsigned(9 downto 0)  := "0110011101";
   signal s_pixel_end  : unsigned(9 downto 0)  := "1000000010";
   signal s_add_sub_30 : unsigned(9 downto 0)  := "0000011110";
-  signal s_move_count : unsigned(13 downto 0) := "00000000000000";
-  signal s_clk_count  : unsigned(1 downto 0)  := "00";
+  signal s_button_act : std_logic             := '0';
 	  
 begin
   p_muliplex : process(reset_i, clk_i)
@@ -61,8 +60,7 @@ begin
 		s_line_end    <= "0101000101";
 		s_pixel_beg   <= "0110011101";
 		s_pixel_end   <= "1000000010";
-		s_move_count  <= "00000000000000";
-		s_clk_count   <= "00";
+		s_button_act  <= '0';
         s_state       <= IDLE_S;
 		
       elsif clk_i 'event and clk_i = '1' then
@@ -116,19 +114,17 @@ begin
 																				
           when MEMORY2_S =>
 		    -- movable object???
+			pixel_beg_o <= std_logic_vector(s_pixel_beg);
+			pixel_end_o <= std_logic_vector(s_pixel_end);
+			line_beg_o  <= std_logic_vector(s_line_beg);
+			line_end_o  <= std_logic_vector(s_line_end);
+			
 			if line_i > std_logic_vector(s_line_beg) then 
 			  if  line_i < std_logic_vector(s_line_end) then
 			    if pixel_i > std_logic_vector(s_pixel_beg) then 
 			      if pixel_i < std_logic_vector(s_pixel_end) then
-			        count_o <= std_logic_vector(s_move_count);
 					rgb_o   <= mem2_rgb_i;
-					if s_clk_count = "11" then		
-					   s_move_count <= s_move_count + "00000000000001";
-					   s_clk_count  <= "00";
-					else
-					   s_clk_count <= s_clk_count + "01";
-					end if;
-		
+					
 				  else
 				    if swsync_i(0) = '1' then
                       rgb_o  <= mem1_rgb_i;
@@ -169,50 +165,61 @@ begin
 				end if;
 			end if;	
 			
-            if s_move_count > "10011100001111" then
-              s_move_count <= "00000000000000";
-            end if;	
-			
-			if pbsync_i = "0111" then
-			  s_pixel_beg <= s_pixel_beg - s_add_sub_30;
-			  s_pixel_end <= s_pixel_end - s_add_sub_30;
-			elsif pbsync_i = "1110" then
-			  s_pixel_beg <= s_pixel_beg + s_add_sub_30;
-			  s_pixel_end <= s_pixel_end + s_add_sub_30;
-			elsif pbsync_i = "1011" then
-			  s_line_beg <= s_line_beg - s_add_sub_30;
-			  s_line_end <= s_line_end - s_add_sub_30;
-			elsif pbsync_i = "1101" then
-			  s_line_beg <= s_line_beg - s_add_sub_30;
-			  s_line_end <= s_line_end - s_add_sub_30;
+			if line_i = std_logic_vector(s_line_beg) then
+			  if pixel_i = std_logic_vector(s_pixel_beg) then
+			    if s_button_act = '0' then
+			      if pbsync_i = "1000" then
+			        if s_pixel_beg > "0010101101" then
+			          s_pixel_beg  <= s_pixel_beg - s_add_sub_30;
+                      s_pixel_end  <= s_pixel_end - s_add_sub_30;
+			          s_button_act <= '1';
+				    end if;
+			      elsif pbsync_i = "0001" then
+			        if s_pixel_end < "1011110010" then
+			          s_pixel_beg  <= s_pixel_beg + s_add_sub_30;
+				      s_pixel_end  <= s_pixel_end + s_add_sub_30;
+			          s_button_act <= '1';
+				    end if;
+			      elsif pbsync_i = "0100" then
+			        if s_line_beg > "0000101100" then
+			          s_line_beg   <= s_line_beg - s_add_sub_30;
+				      s_line_end   <= s_line_end - s_add_sub_30;
+			          s_button_act <= '1';
+				    end if;
+			      elsif pbsync_i = "0010" then
+			        if s_line_end < "0111111001" then
+			          s_line_beg   <= s_line_beg + s_add_sub_30;
+				      s_line_end   <= s_line_end + s_add_sub_30;
+			          s_button_act <= '1';
+					end if;
+				  end if;
+			    end if;
+			  end if;
 			end if;
 			
-			  
+			if pbsync_i = "0000" then
+			  s_button_act <= '0';
+			end if;
+				  
             if swsync_i(2) = '1' then
               s_state  <= MEMORY2_S;
             elsif swsync_i(0) = '1' then
-			  s_line_beg   <= "0011100000";
-		      s_line_end   <= "0101000101";
-		      s_pixel_beg  <= "0110011101";
-		      s_pixel_end  <= "1000000010";
-			  s_move_count  <= "00000000000000";
-		      s_clk_count   <= "00";
+			  s_line_beg    <= "0011100000";
+		      s_line_end    <= "0101000101";
+		      s_pixel_beg   <= "0110011101";
+		      s_pixel_end   <= "1000000010";
               s_state  <= MEMORY1_S;
 			elsif swsync_i(2 downto 0) = "000" then
-			  s_line_beg   <= "0011100000";
-		      s_line_end   <= "0101000101";
-		      s_pixel_beg  <= "0110011101";
-		      s_pixel_end  <= "1000000010";
-			  s_move_count  <= "00000000000000";
-		      s_clk_count   <= "00";
+			  s_line_beg    <= "0011100000";
+		      s_line_end    <= "0101000101";
+		      s_pixel_beg   <= "0110011101";
+		      s_pixel_end   <= "1000000010";
               s_state  <= PATTERN1_S;
             elsif swsync_i(2 downto 0) = "010" then
-			  s_line_beg   <= "0011100000";
-		      s_line_end   <= "0101000101";
-		      s_pixel_beg  <= "0110011101";
-		      s_pixel_end  <= "1000000010";
-			  s_move_count  <= "00000000000000";
-		      s_clk_count   <= "00";
+			  s_line_beg    <= "0011100000";
+		      s_line_end    <= "0101000101";
+		      s_pixel_beg   <= "0110011101";
+		      s_pixel_end   <= "1000000010";
               s_state <= PATTERN2_S;
             end if;
 					

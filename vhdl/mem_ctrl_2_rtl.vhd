@@ -53,8 +53,10 @@ end component;
 
   signal s_clk_50M    : std_logic;
   signal s_clk_count  : unsigned(1 downto 0);
+  signal s_addr_buff  : unsigned (13 downto 0);
   signal s_rom_addr   : std_logic_vector(13 downto 0); 
   signal s_rom_dout   : std_logic_vector(11 downto 0);
+  signal s_count      : unsigned(13 downto 0)  := "00000000000010";
 
 begin
 
@@ -82,18 +84,27 @@ begin
       if reset_i = '1' then
         rgb_o      <= "000000000000";   -- all colors 0
 		s_rom_addr <= "00000000000000";
+		s_count    <= "00000000000010";	  
 	
-	  elsif clk_i 'event and clk_i = '1' then  
-        if enable_25M_i = '1' then
-		  s_rom_addr <= count_i; 
-		end if;
+	  elsif clk_i 'event and clk_i = '1' then  		
+		if line_i > line_beg_i and line_i < line_end_i then 
+		  if pixel_i > pixel_beg_i and pixel_i < pixel_end_i then 
+			if enable_25M_i = '1' then
+			  if s_count > "10011100010000"  then
+			    s_count <= "00000000000010";
+			  else
+	            s_count <= s_count + "00000000000001";
+			  end if;
+			end if;
+			 
+			  s_rom_addr <= std_logic_vector(s_count);
+			  rgb_o      <= s_rom_dout;
 		
-		if line_i < "0000100011" or line_i > "1000000010" then 
-		  rgb_o   <= "000000000000";
-	    elsif pixel_i < "0010010000" or pixel_i > "1100001111" then
-		  rgb_o   <= "000000000000"; 
+		  else 
+		    rgb_o <= "000000000000";
+		  end if;
 		else 
-		  rgb_o <= s_rom_dout; 	
+		  rgb_o <= "000000000000";
 		end if;
 	  end if;
 	end process p_memory;
@@ -105,7 +116,5 @@ begin
      addra => s_rom_addr,
      douta => s_rom_dout
     );
-	
-	
-	
+
 end rtl;

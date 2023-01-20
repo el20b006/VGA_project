@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1674149128">
-  <File Type="PA-TCL" Name="VGA_ctrl_top_struc_cfg.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1674235917">
   <File Type="RDS-PROPCONSTRS" Name="VGA_ctrl_top_struc_cfg_drc_synth.rpt"/>
+  <File Type="PA-TCL" Name="VGA_ctrl_top_struc_cfg.tcl"/>
   <File Type="RDS-RDS" Name="VGA_ctrl_top_struc_cfg.vds"/>
   <File Type="RDS-UTIL" Name="VGA_ctrl_top_struc_cfg_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="VGA_ctrl_top_struc_cfg_utilization_synth.pb"/>
@@ -10,13 +10,13 @@
   <File Type="VDS-TIMING-PB" Name="VGA_ctrl_top_struc_cfg_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../../vhdl/source_multiplexer_.vhd">
+    <File Path="$PPRDIR/../../vhdl/mem_ctrl_2_.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../vhdl/mem_ctrl_2_.vhd">
+    <File Path="$PPRDIR/../../vhdl/source_multiplexer_.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -58,13 +58,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../vhdl/source_multiplexer_rtl.vhd">
+    <File Path="$PPRDIR/../../vhdl/mem_ctrl_2_rtl.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../vhdl/mem_ctrl_2_rtl.vhd">
+    <File Path="$PPRDIR/../../vhdl/source_multiplexer_rtl.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>

@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
+/bin/touch .init_design.begin.rst
 EAStep vivado -log VGA_ctrl_top_struc_cfg.vdi -applog -m64 -messageDb vivado.pb -mode batch -source VGA_ctrl_top_struc_cfg.tcl -notrace
 
 

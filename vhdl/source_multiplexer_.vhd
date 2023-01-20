@@ -51,6 +51,9 @@ entity source_multiplexer is
         mem1_rgb_i  :  in   std_logic_vector(11 downto 0);  -- rgb values
         mem2_rgb_i  :  in   std_logic_vector(11 downto 0);  -- rgb values
         rgb_o       :  out  std_logic_vector(11 downto 0);  -- rgb output
-		count_o     :  out  std_logic_vector(13 downto 0)
+		line_beg_o  :  out  std_logic_vector(9 downto 0);
+		line_end_o  :  out  std_logic_vector(9 downto 0);
+        pixel_beg_o :  out  std_logic_vector(9 downto 0);
+        pixel_end_o :  out  std_logic_vector(9 downto 0)		
         );																		
 end source_multiplexer;

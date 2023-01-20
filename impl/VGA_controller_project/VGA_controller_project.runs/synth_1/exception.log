@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file C:\Users\sarah\OneDrive\Dokumente\FH\5. Sem\CHIP\Froeler_Project\impl\VGA_controller_project\VGA_controller_project.runs\synth_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: Erlaubnis verweigert.
