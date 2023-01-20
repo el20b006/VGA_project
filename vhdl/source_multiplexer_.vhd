@@ -44,10 +44,13 @@ entity source_multiplexer is
         reset_i	    :  in   std_logic;                      -- reset
         swsync_i    :  in   std_logic_vector(15 downto 0);  -- switches
         pbsync_i    :  in   std_logic_vector(3 downto 0);   -- buttons
+		pixel_i     :  in   std_logic_vector(9 downto 0);   -- pixel counter
+        line_i      :  in   std_logic_vector(9 downto 0);   -- line counter
         pat1_rgb_i  :  in   std_logic_vector(11 downto 0);  -- rgb values
         pat2_rgb_i  :  in   std_logic_vector(11 downto 0);  -- rgb values
         mem1_rgb_i  :  in   std_logic_vector(11 downto 0);  -- rgb values
         mem2_rgb_i  :  in   std_logic_vector(11 downto 0);  -- rgb values
-        rgb_o       :  out  std_logic_vector(11 downto 0)   -- rgb output
+        rgb_o       :  out  std_logic_vector(11 downto 0);  -- rgb output
+		count_o     :  out  std_logic_vector(13 downto 0)
         );																		
 end source_multiplexer;

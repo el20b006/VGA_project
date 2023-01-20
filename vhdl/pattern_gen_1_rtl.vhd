@@ -85,9 +85,9 @@ begin
 		  rgb_o <= "000000001111";   -- blue 1, others 0
 		elsif pixel_i > "1000011111" and pixel_i < "1001001000" then		
           rgb_o <= "000000001111";   -- blue 1, others 0
-		elsif pixel_i > "1011011111" and pixel_i < "1011101000" then
+		elsif pixel_i > "1010011111" and pixel_i < "1011101000" then
 		  rgb_o <= "000000001111";   -- blue 1, others 0   
 		end if;				
 	  end if;
-    end process;
+    end process p_generate;
 end rtl;

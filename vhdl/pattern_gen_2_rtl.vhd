@@ -318,5 +318,5 @@ begin
 		  
 		end if;	
 	  end if;
-	end process;
+	end process p_generate;
 end rtl;

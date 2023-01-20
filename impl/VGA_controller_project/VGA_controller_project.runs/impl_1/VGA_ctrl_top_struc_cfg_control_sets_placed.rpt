@@ -1,0 +1,73 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Thu Jan 19 18:27:12 2023
+| Host         : DESKTOP-7DLC06A running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file VGA_ctrl_top_struc_cfg_control_sets_placed.rpt
+| Design       : VGA_ctrl_top_struc_cfg
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    20 |
+| Unused register locations in slices containing registers |    91 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              17 |            7 |
+| No           | No                    | Yes                    |             134 |           47 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              38 |            8 |
+| Yes          | No                    | Yes                    |             224 |           77 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------------+-----------------------------------------------+------------------+------------------+----------------+
+|    Clock Signal    |                 Enable Signal                 | Set/Reset Signal | Slice Load Count | Bel Load Count |
++--------------------+-----------------------------------------------+------------------+------------------+----------------+
+|  clk_i_IBUF_BUFG   | i_io_ctrl/swsync_o0                           | reset_i_IBUF     |                1 |              3 |
+|  clk_i_IBUF_BUFG   | i_io_ctrl/pbsync_o0                           | reset_i_IBUF     |                1 |              4 |
+|  clk_i_IBUF_BUFG   | i_io_ctrl/s_pb_buff0                          |                  |                1 |              4 |
+|  clk_i_IBUF_BUFG   | i_mem_ctrl_1/E[0]                             |                  |                1 |              4 |
+|  i_mem_ctrl_2/clka |                                               |                  |                2 |              6 |
+|  clk_i_IBUF_BUFG   | i_VGA_ctrl/s_line_count_0                     | reset_i_IBUF     |                4 |             10 |
+|  i_mem_ctrl_1/clka |                                               |                  |                5 |             11 |
+|  clk_i_IBUF_BUFG   | i_source_multiplexer/rgb_o[11]_i_1__0_n_0     | reset_i_IBUF     |                7 |             12 |
+|  clk_i_IBUF_BUFG   | i_source_multiplexer/count_o0                 |                  |                3 |             14 |
+|  clk_i_IBUF_BUFG   | i_source_multiplexer/s_move_count[13]_i_1_n_0 | reset_i_IBUF     |                3 |             14 |
+|  clk_i_IBUF_BUFG   | i_io_ctrl/s_sw_buff0                          |                  |                3 |             16 |
+|  clk_i_IBUF_BUFG   | i_VGA_ctrl/E[0]                               | reset_i_IBUF     |                7 |             17 |
+|  clk_i_IBUF_BUFG   | i_mem_ctrl_1/s_count1[0]_i_1_n_0              | reset_i_IBUF     |                5 |             17 |
+|  clk_i_IBUF_BUFG   | i_mem_ctrl_1/s_count2[0]_i_1_n_0              | reset_i_IBUF     |                5 |             17 |
+|  clk_i_IBUF_BUFG   | i_mem_ctrl_1/s_count3[0]_i_1_n_0              | reset_i_IBUF     |                5 |             17 |
+|  clk_i_IBUF_BUFG   | i_mem_ctrl_1/s_count4[0]_i_1_n_0              | reset_i_IBUF     |                5 |             17 |
+|  clk_i_IBUF_BUFG   | i_io_ctrl/s_line_beg_reg[1]_0[0]              | reset_i_IBUF     |                7 |             18 |
+|  clk_i_IBUF_BUFG   | i_io_ctrl/E[0]                                | reset_i_IBUF     |                6 |             20 |
+|  clk_i_IBUF_BUFG   | i_prescaler/s_rom_addr_reg[13][0]             | reset_i_IBUF     |               21 |             58 |
+|  clk_i_IBUF_BUFG   |                                               | reset_i_IBUF     |               47 |            134 |
++--------------------+-----------------------------------------------+------------------+------------------+----------------+
+
+

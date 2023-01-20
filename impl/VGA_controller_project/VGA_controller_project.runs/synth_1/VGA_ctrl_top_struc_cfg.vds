@@ -1,0 +1,541 @@
+#-----------------------------------------------------------
+# Vivado v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Thu Jan 19 18:25:35 2023
+# Process ID: 10904
+# Current directory: C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.runs/synth_1
+# Command line: vivado.exe -log VGA_ctrl_top_struc_cfg.vds -mode batch -messageDb vivado.pb -notrace -source VGA_ctrl_top_struc_cfg.tcl
+# Log file: C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.runs/synth_1/VGA_ctrl_top_struc_cfg.vds
+# Journal file: C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source VGA_ctrl_top_struc_cfg.tcl -notrace
+Command: synth_design -top VGA_ctrl_top_struc_cfg -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15428 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 268.551 ; gain = 61.551
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'VGA_ctrl_top_struc_cfg' [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/VGA_ctrl_top_struc_cfg.vhd:39]
+INFO: [Synth 8-3491] module 'io_ctrl' declared at 'C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/io_ctrl_.vhd:42' bound to instance 'i_io_ctrl' of component 'io_ctrl' [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/VGA_ctrl_top_struc.vhd:147]
+INFO: [Synth 8-638] synthesizing module 'io_ctrl' [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/io_ctrl_rtl.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'io_ctrl' (1#1) [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/io_ctrl_rtl.vhd:44]
+INFO: [Synth 8-3491] module 'mem_ctrl_1' declared at 'C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/mem_ctrl_1_.vhd:42' bound to instance 'i_mem_ctrl_1' of component 'mem_ctrl_1' [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/VGA_ctrl_top_struc.vhd:158]
+INFO: [Synth 8-638] synthesizing module 'mem_ctrl_1' [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/mem_ctrl_1_rtl.vhd:44]
+INFO: [Synth 8-3491] module 'rom1' declared at 'C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.runs/synth_1/.Xil/Vivado-10904-DESKTOP-7DLC06A/realtime/rom1_stub.vhdl:5' bound to instance 'i_rom1' of component 'rom1' [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/mem_ctrl_1_rtl.vhd:150]
+INFO: [Synth 8-638] synthesizing module 'rom1' [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.runs/synth_1/.Xil/Vivado-10904-DESKTOP-7DLC06A/realtime/rom1_stub.vhdl:14]
+INFO: [Synth 8-256] done synthesizing module 'mem_ctrl_1' (2#1) [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/mem_ctrl_1_rtl.vhd:44]
+INFO: [Synth 8-3491] module 'mem_ctrl_2' declared at 'C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/mem_ctrl_2_.vhd:42' bound to instance 'i_mem_ctrl_2' of component 'mem_ctrl_2' [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/VGA_ctrl_top_struc.vhd:169]
+INFO: [Synth 8-638] synthesizing module 'mem_ctrl_2' [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/mem_ctrl_2_rtl.vhd:44]
+INFO: [Synth 8-3491] module 'rom2' declared at 'C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.runs/synth_1/.Xil/Vivado-10904-DESKTOP-7DLC06A/realtime/rom2_stub.vhdl:5' bound to instance 'i_rom2' of component 'rom2' [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/mem_ctrl_2_rtl.vhd:102]
+INFO: [Synth 8-638] synthesizing module 'rom2' [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.runs/synth_1/.Xil/Vivado-10904-DESKTOP-7DLC06A/realtime/rom2_stub.vhdl:14]
+INFO: [Synth 8-256] done synthesizing module 'mem_ctrl_2' (3#1) [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/mem_ctrl_2_rtl.vhd:44]
+INFO: [Synth 8-3491] module 'pattern_gen_1' declared at 'C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/pattern_gen_1_.vhd:42' bound to instance 'i_pattern_gen_1' of component 'pattern_gen_1' [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/VGA_ctrl_top_struc.vhd:181]
+INFO: [Synth 8-638] synthesizing module 'pattern_gen_1' [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/pattern_gen_1_rtl.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'pattern_gen_1' (4#1) [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/pattern_gen_1_rtl.vhd:43]
+INFO: [Synth 8-3491] module 'pattern_gen_2' declared at 'C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/pattern_gen_2_.vhd:42' bound to instance 'i_pattern_gen_2' of component 'pattern_gen_2' [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/VGA_ctrl_top_struc.vhd:191]
+INFO: [Synth 8-638] synthesizing module 'pattern_gen_2' [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/pattern_gen_2_rtl.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'pattern_gen_2' (5#1) [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/pattern_gen_2_rtl.vhd:44]
+INFO: [Synth 8-3491] module 'prescaler' declared at 'C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/prescaler_.vhd:42' bound to instance 'i_prescaler' of component 'prescaler' [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/VGA_ctrl_top_struc.vhd:201]
+INFO: [Synth 8-638] synthesizing module 'prescaler' [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/prescaler_rtl.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'prescaler' (6#1) [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/prescaler_rtl.vhd:44]
+INFO: [Synth 8-3491] module 'source_multiplexer' declared at 'C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/source_multiplexer_.vhd:42' bound to instance 'i_source_multiplexer' of component 'source_multiplexer' [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/VGA_ctrl_top_struc.vhd:209]
+INFO: [Synth 8-638] synthesizing module 'source_multiplexer' [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/source_multiplexer_rtl.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'source_multiplexer' (7#1) [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/source_multiplexer_rtl.vhd:44]
+INFO: [Synth 8-3491] module 'VGA_ctrl' declared at 'C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/VGA_ctrl_.vhd:42' bound to instance 'i_VGA_ctrl' of component 'VGA_ctrl' [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/VGA_ctrl_top_struc.vhd:226]
+INFO: [Synth 8-638] synthesizing module 'VGA_ctrl' [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/VGA_ctrl_rtl.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'VGA_ctrl' (8#1) [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/VGA_ctrl_rtl.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'VGA_ctrl_top_struc_cfg' (9#1) [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/VGA_ctrl_top_struc_cfg.vhd:39]
+WARNING: [Synth 8-3331] design source_multiplexer has unconnected port swsync_i[15]
+WARNING: [Synth 8-3331] design source_multiplexer has unconnected port swsync_i[14]
+WARNING: [Synth 8-3331] design source_multiplexer has unconnected port swsync_i[13]
+WARNING: [Synth 8-3331] design source_multiplexer has unconnected port swsync_i[12]
+WARNING: [Synth 8-3331] design source_multiplexer has unconnected port swsync_i[11]
+WARNING: [Synth 8-3331] design source_multiplexer has unconnected port swsync_i[10]
+WARNING: [Synth 8-3331] design source_multiplexer has unconnected port swsync_i[9]
+WARNING: [Synth 8-3331] design source_multiplexer has unconnected port swsync_i[8]
+WARNING: [Synth 8-3331] design source_multiplexer has unconnected port swsync_i[7]
+WARNING: [Synth 8-3331] design source_multiplexer has unconnected port swsync_i[6]
+WARNING: [Synth 8-3331] design source_multiplexer has unconnected port swsync_i[5]
+WARNING: [Synth 8-3331] design source_multiplexer has unconnected port swsync_i[4]
+WARNING: [Synth 8-3331] design source_multiplexer has unconnected port swsync_i[3]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 305.934 ; gain = 98.934
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 305.934 ; gain = 98.934
+---------------------------------------------------------------------------------
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'rom1' instantiated as 'i_mem_ctrl_1/i_rom1' [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/mem_ctrl_1_rtl.vhd:150]
+WARNING: [Project 1-486] Could not resolve non-primitive black box cell 'rom2' instantiated as 'i_mem_ctrl_2/i_rom2' [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/mem_ctrl_2_rtl.vhd:102]
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.runs/synth_1/.Xil/Vivado-10904-DESKTOP-7DLC06A/dcp/rom1_in_context.xdc] for cell 'i_mem_ctrl_1/i_rom1'
+Finished Parsing XDC File [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.runs/synth_1/.Xil/Vivado-10904-DESKTOP-7DLC06A/dcp/rom1_in_context.xdc] for cell 'i_mem_ctrl_1/i_rom1'
+Parsing XDC File [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.runs/synth_1/.Xil/Vivado-10904-DESKTOP-7DLC06A/dcp_2/rom2_in_context.xdc] for cell 'i_mem_ctrl_2/i_rom2'
+Finished Parsing XDC File [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.runs/synth_1/.Xil/Vivado-10904-DESKTOP-7DLC06A/dcp_2/rom2_in_context.xdc] for cell 'i_mem_ctrl_2/i_rom2'
+Parsing XDC File [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.srcs/constrs_1/new/VGA_ctrl_project.xdc]
+Finished Parsing XDC File [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.srcs/constrs_1/new/VGA_ctrl_project.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.srcs/constrs_1/new/VGA_ctrl_project.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/VGA_ctrl_top_struc_cfg_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/VGA_ctrl_top_struc_cfg_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 601.590 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 601.590 ; gain = 394.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 601.590 ; gain = 394.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 601.590 ; gain = 394.590
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "s_sw_buff" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "s_pb_buff" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "s_clk_50M" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_clk_50M" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rgb_o" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rgb_o" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "enable_25M_o" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "s_enable_count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "s_move_count" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 601.590 ; gain = 394.590
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 9     
+	   2 Input      2 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	               14 Bit    Registers := 3     
+	               12 Bit    Registers := 6     
+	               10 Bit    Registers := 8     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 3     
+	   2 Input     14 Bit        Muxes := 4     
+	   3 Input     14 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 14    
+	  14 Input     12 Bit        Muxes := 1     
+	   8 Input     12 Bit        Muxes := 1     
+	  17 Input     12 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 14    
+	   3 Input     10 Bit        Muxes := 4     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 8     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 51    
+	  17 Input      1 Bit        Muxes := 1     
+	  12 Input      1 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 6     
+	   3 Input      1 Bit        Muxes := 5     
+	   5 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module io_ctrl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module mem_ctrl_1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 3     
+	   2 Input     12 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 12    
+Module mem_ctrl_2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               14 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 6     
+Module pattern_gen_1 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
++---Muxes : 
+	  14 Input     12 Bit        Muxes := 1     
+	  17 Input      1 Bit        Muxes := 1     
+Module pattern_gen_2 
+Detailed RTL Component Info : 
++---Registers : 
+	               12 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 4     
+	   8 Input     12 Bit        Muxes := 1     
+	  17 Input     12 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+	  12 Input      1 Bit        Muxes := 1     
+Module prescaler 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module source_multiplexer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 6     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               14 Bit    Registers := 2     
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 4     
+	   3 Input     14 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 6     
+	   2 Input     10 Bit        Muxes := 10    
+	   3 Input     10 Bit        Muxes := 4     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 4     
+	   3 Input      2 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 6     
+	   2 Input      1 Bit        Muxes := 18    
+	   3 Input      1 Bit        Muxes := 5     
+	   5 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module VGA_ctrl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 3     
++---Registers : 
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 4     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:18 ; elapsed = 00:00:23 . Memory (MB): peak = 601.590 ; gain = 394.590
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "i_io_ctrl/s_sw_buff" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "i_io_ctrl/s_pb_buff" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "i_prescaler/s_enable_count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "i_prescaler/enable_25M_o" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 601.590 ; gain = 394.590
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 601.590 ; gain = 394.590
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'i_pattern_gen_1/rgb_o_reg[0]' (FDCE) to 'i_pattern_gen_1/rgb_o_reg[1]'
+INFO: [Synth 8-3886] merging instance 'i_pattern_gen_2/rgb_o_reg[0]' (FDCE) to 'i_pattern_gen_2/rgb_o_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_pattern_gen_1/rgb_o_reg[1]' (FDCE) to 'i_pattern_gen_1/rgb_o_reg[2]'
+INFO: [Synth 8-3886] merging instance 'i_pattern_gen_2/rgb_o_reg[1]' (FDCE) to 'i_pattern_gen_2/rgb_o_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_pattern_gen_1/rgb_o_reg[2]' (FDCE) to 'i_pattern_gen_1/rgb_o_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_pattern_gen_2/rgb_o_reg[2]' (FDCE) to 'i_pattern_gen_2/rgb_o_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_pattern_gen_1/rgb_o_reg[4]' (FDCE) to 'i_pattern_gen_1/rgb_o_reg[5]'
+INFO: [Synth 8-3886] merging instance 'i_pattern_gen_2/rgb_o_reg[4]' (FDCE) to 'i_pattern_gen_2/rgb_o_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_pattern_gen_1/rgb_o_reg[5]' (FDCE) to 'i_pattern_gen_1/rgb_o_reg[6]'
+INFO: [Synth 8-3886] merging instance 'i_pattern_gen_2/rgb_o_reg[5]' (FDCE) to 'i_pattern_gen_2/rgb_o_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_pattern_gen_1/rgb_o_reg[6]' (FDCE) to 'i_pattern_gen_1/rgb_o_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_pattern_gen_2/rgb_o_reg[6]' (FDCE) to 'i_pattern_gen_2/rgb_o_reg[7]'
+INFO: [Synth 8-3886] merging instance 'i_pattern_gen_1/rgb_o_reg[8]' (FDCE) to 'i_pattern_gen_1/rgb_o_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_pattern_gen_2/rgb_o_reg[8]' (FDCE) to 'i_pattern_gen_2/rgb_o_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_pattern_gen_1/rgb_o_reg[9]' (FDCE) to 'i_pattern_gen_1/rgb_o_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_pattern_gen_2/rgb_o_reg[9]' (FDCE) to 'i_pattern_gen_2/rgb_o_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_pattern_gen_1/rgb_o_reg[10]' (FDCE) to 'i_pattern_gen_1/rgb_o_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_pattern_gen_2/rgb_o_reg[10]' (FDCE) to 'i_pattern_gen_2/rgb_o_reg[11]'
+WARNING: [Synth 8-3332] Sequential element (i_io_ctrl/swsync_o_reg[15]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_io_ctrl/swsync_o_reg[14]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_io_ctrl/swsync_o_reg[13]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_io_ctrl/swsync_o_reg[12]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_io_ctrl/swsync_o_reg[11]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_io_ctrl/swsync_o_reg[10]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_io_ctrl/swsync_o_reg[9]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_io_ctrl/swsync_o_reg[8]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_io_ctrl/swsync_o_reg[7]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_io_ctrl/swsync_o_reg[6]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_io_ctrl/swsync_o_reg[5]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_io_ctrl/swsync_o_reg[4]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_io_ctrl/swsync_o_reg[3]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_source_multiplexer/s_line_end_reg[0]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_source_multiplexer/s_line_beg_reg[0]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_pattern_gen_1/rgb_o_reg[10]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_pattern_gen_1/rgb_o_reg[9]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_pattern_gen_1/rgb_o_reg[8]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_pattern_gen_1/rgb_o_reg[6]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_pattern_gen_1/rgb_o_reg[5]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_pattern_gen_1/rgb_o_reg[4]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_pattern_gen_1/rgb_o_reg[2]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_pattern_gen_1/rgb_o_reg[1]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_pattern_gen_1/rgb_o_reg[0]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_pattern_gen_2/rgb_o_reg[10]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_pattern_gen_2/rgb_o_reg[9]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_pattern_gen_2/rgb_o_reg[8]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_pattern_gen_2/rgb_o_reg[6]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_pattern_gen_2/rgb_o_reg[5]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_pattern_gen_2/rgb_o_reg[4]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_pattern_gen_2/rgb_o_reg[2]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_pattern_gen_2/rgb_o_reg[1]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+WARNING: [Synth 8-3332] Sequential element (i_pattern_gen_2/rgb_o_reg[0]) is unused and will be removed from module VGA_ctrl_top_struc_cfg.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 601.590 ; gain = 394.590
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 601.590 ; gain = 394.590
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 601.590 ; gain = 394.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 612.215 ; gain = 405.215
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 623.879 ; gain = 416.879
+---------------------------------------------------------------------------------
+Finished Parallel Technology Mapping Optimization  : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 623.879 ; gain = 416.879
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:34 ; elapsed = 00:00:39 . Memory (MB): peak = 623.879 ; gain = 416.879
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 623.879 ; gain = 416.879
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 623.879 ; gain = 416.879
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 623.879 ; gain = 416.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 623.879 ; gain = 416.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 623.879 ; gain = 416.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 623.879 ; gain = 416.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |rom1          |         1|
+|2     |rom2          |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |rom1_bbox |     1|
+|2     |rom2_bbox |     1|
+|3     |BUFG      |     1|
+|4     |CARRY4    |    64|
+|5     |LUT1      |   114|
+|6     |LUT2      |    71|
+|7     |LUT3      |   124|
+|8     |LUT4      |    74|
+|9     |LUT5      |    86|
+|10    |LUT6      |   168|
+|11    |FDCE      |   339|
+|12    |FDPE      |    19|
+|13    |FDRE      |    38|
+|14    |IBUF      |    22|
+|15    |OBUF      |    14|
++------+----------+------+
+
+Report Instance Areas: 
++------+-----------------------+-------------------+------+
+|      |Instance               |Module             |Cells |
++------+-----------------------+-------------------+------+
+|1     |top                    |                   |  1158|
+|2     |  i_VGA_ctrl           |VGA_ctrl           |   202|
+|3     |  i_io_ctrl            |io_ctrl            |   312|
+|4     |  i_mem_ctrl_1         |mem_ctrl_1         |   233|
+|5     |  i_mem_ctrl_2         |mem_ctrl_2         |    44|
+|6     |  i_pattern_gen_1      |pattern_gen_1      |     3|
+|7     |  i_pattern_gen_2      |pattern_gen_2      |     6|
+|8     |  i_prescaler          |prescaler          |   113|
+|9     |  i_source_multiplexer |source_multiplexer |   208|
++------+-----------------------+-------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 623.879 ; gain = 416.879
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 33 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 623.879 ; gain = 121.223
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 623.879 ; gain = 416.879
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 86 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+73 Infos, 48 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 623.879 ; gain = 416.879
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 623.879 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Jan 19 18:26:18 2023...

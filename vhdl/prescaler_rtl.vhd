@@ -42,21 +42,21 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 architecture rtl of prescaler is 
-  signal enable_count  :  integer  := 1;  -- counter for 25MHz enable signal
+  signal s_enable_count  :  integer  := 1;  -- counter for 25MHz enable 
 	
 begin
   p_enable : process(reset_i, clk_i)     -- 25MHz enable signal
     begin
       if reset_i = '1' then
         enable_25M_o  <= '0';
-        enable_count  <= 1;
+        s_enable_count  <= 1;
       elsif clk_i 'event and clk_i = '1' then
-        if enable_count = 4 then
+        if s_enable_count = 4 then
           enable_25M_o  <= '1';
-          enable_count  <= 1;
+          s_enable_count  <= 1;
         else
           enable_25M_o  <= '0';
-          enable_count  <= enable_count + 1;
+          s_enable_count  <= s_enable_count + 1;
         end if;
       end if;
     end process p_enable;

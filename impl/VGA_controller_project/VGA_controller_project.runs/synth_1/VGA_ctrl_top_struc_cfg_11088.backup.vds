@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Thu Jan 19 12:32:51 2023
+# Process ID: 11088
+# Current directory: C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.runs/synth_1
+# Command line: vivado.exe -log VGA_ctrl_top_struc_cfg.vds -mode batch -messageDb vivado.pb -notrace -source VGA_ctrl_top_struc_cfg.tcl
+# Log file: C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.runs/synth_1/VGA_ctrl_top_struc_cfg.vds
+# Journal file: C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source VGA_ctrl_top_struc_cfg.tcl -notrace
+Command: synth_design -top VGA_ctrl_top_struc_cfg -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13952 

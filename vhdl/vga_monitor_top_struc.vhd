@@ -41,12 +41,13 @@ use IEEE.std_logic_1164.all;
 
 architecture struc of vga_monitor_top is
   
-  component pattern_gen_2
-    port(clk_i    :  in   std_logic;                     -- system clock
-         reset_i  :  in   std_logic;                     -- reset
-         pixel_i  :  in   std_logic_vector(9 downto 0);  -- pixel counter
-         line_i   :  in   std_logic_vector(9 downto 0);  -- line counter
-         rgb_o    :  out  std_logic_vector(11 downto 0)  -- rgb output
+  component mem_ctrl_1       -- pattern_gen_1   pattern_gen_2   mem_ctrl_1
+    port(clk_i         :  in   std_logic;                     -- system clock
+         reset_i       :  in   std_logic;                     -- reset
+		 enable_25M_i  :  in   std_logic;                     -- only for mem
+         pixel_i       :  in   std_logic_vector(9 downto 0);  -- pixel counter
+         line_i        :  in   std_logic_vector(9 downto 0);  -- line counter
+         rgb_o         :  out  std_logic_vector(11 downto 0)  -- rgb output
 		);
   end component;
 
@@ -88,13 +89,14 @@ architecture struc of vga_monitor_top is
 begin
 
   -- Instantiate the pattern_gen_1 unit
-  i_pattern_gen_2 : pattern_gen_2
+  i_mem_ctrl_1 : mem_ctrl_1
   port map
-    (clk_i    => clk,
-	 reset_i  => reset,
-	 pixel_i  => pixel_count,
-	 line_i   => line_count,
-	 rgb_o    => rgb
+    (clk_i        => clk,
+	 reset_i      => reset,
+	 enable_25M_i => enable,         -- only for mem
+	 pixel_i      => pixel_count,
+	 line_i       => line_count,
+	 rgb_o        => rgb
     );
 	
   -- Instantiate the VGA_ctrl unit

@@ -1,0 +1,69 @@
+/*
+
+Vivado v2016.1 (64-bit)
+SW Build 1538259 on Fri Apr  8 15:45:27 MDT 2016
+Process ID: 16352
+
+Current time: 	1/20/23 8:22:12 AM CET
+Time zone: 	Central European Time (Europe/Berlin)
+
+OS: Windows 10
+Version: 10.0
+Architecture: amd64
+Available processors (cores): 16
+
+Screen size: 1536x864
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_66 64-bit
+Java home: 	C:/Xilinx/Vivado/2016.1/tps/win64/jre
+
+User name: 	sarah
+User home directory: C:/Users/sarah
+User working directory: C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project
+User country: 	AT
+User language: 	de
+User locale: 	de_AT
+
+RDI Base root directory: C:/Xilinx/Vivado
+RDI Data directory: C:/Xilinx/Vivado/2016.1/data
+RDI Bin directory: C:/Xilinx/Vivado/2016.1/bin
+
+Vivado preferences path: C:/Users/sarah/AppData/Roaming/Xilinx/Vivado/2016.1/vivado.ini
+Vivado layouts directory: C:/Users/sarah/AppData/Roaming/Xilinx/Vivado/2016.1/layouts
+
+GUI allocated memory:	211 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 589 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Users\sarah\OneDrive\Dokumente\FH\5. Sem\CHIP\Froeler_Project\impl\VGA_controller_project\VGA_controller_project.xpr. Version: Vivado v2016.1 
+// bL:g (cv:JFrame):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// Tcl Message: open_project {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.xpr} 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project' 
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// [GUI Memory]: 45 MB (+44608kb) [00:00:06]
+// [Engine Memory]: 421 MB (+290204kb) [00:00:06]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 477 MB (+36163kb) [00:00:08]
+// [GUI Memory]: 59 MB (+12541kb) [00:00:09]
+// [Engine Memory]: 557 MB (+58993kb) [00:00:09]
+// [GUI Memory]: 63 MB (+1348kb) [00:00:09]
+// [GUI Memory]: 68 MB (+1889kb) [00:00:09]
+// [GUI Memory]: 73 MB (+1063kb) [00:00:10]
+// TclEventType: FILE_SET_OPTIONS_CHANGE

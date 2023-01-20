@@ -43,14 +43,69 @@ use IEEE.numeric_std.all;
 
 architecture rtl of mem_ctrl_2 is
 
+component rom2 is
+  port(
+    clka  : in  std_logic; -- ROM clock
+    addra : in  std_logic_vector(13 downto 0);  -- ROM address
+    douta : out std_logic_vector(11 downto 0)    -- ROM data outputs
+    );
+end component;
+
+  signal s_clk_50M    : std_logic;
+  signal s_clk_count  : unsigned(1 downto 0);
+  signal s_rom_addr   : std_logic_vector(13 downto 0); 
+  signal s_rom_dout   : std_logic_vector(11 downto 0);
+
 begin
+
+  p_mem_clk : process(clk_i, reset_i)
+    begin
+	  if reset_i = '1' then
+	    s_clk_50M <= '0';
+	  elsif clk_i 'event and clk_i = '1' then
+	    if s_clk_count = "00" or s_clk_count = "01" then
+		  s_clk_50M   <= '1';
+		  s_clk_count <= s_clk_count + "01";
+		elsif s_clk_count = "10" then
+		  s_clk_50M   <= '0';
+		  s_clk_count <= s_clk_count + "01";
+		elsif s_clk_count = "11" then
+		  s_clk_50M   <= '0';
+		  s_clk_count <= "00";
+		end if;
+	  end if;
+	end process;
+
+
   p_memory : process(clk_i, reset_i)
     begin
       if reset_i = '1' then
-        rgb_o  <= "000000000000";   -- all colors 0
+        rgb_o      <= "000000000000";   -- all colors 0
+		s_rom_addr <= "00000000000000";
 	
-	  elsif clk_i 'event and clk_i = '1' then
-	    rgb_o  <= "111111111111";
+	  elsif clk_i 'event and clk_i = '1' then  
+        if enable_25M_i = '1' then
+		  s_rom_addr <= count_i; 
+		end if;
+		
+		if line_i < "0000100011" or line_i > "1000000010" then 
+		  rgb_o   <= "000000000000";
+	    elsif pixel_i < "0010010000" or pixel_i > "1100001111" then
+		  rgb_o   <= "000000000000"; 
+		else 
+		  rgb_o <= s_rom_dout; 	
+		end if;
 	  end if;
-	end process;
+	end process p_memory;
+
+  -- instantiate ROM2
+  i_rom2 : rom2
+    port map
+	(clka  => s_clk_50M,
+     addra => s_rom_addr,
+     douta => s_rom_dout
+    );
+	
+	
+	
 end rtl;
