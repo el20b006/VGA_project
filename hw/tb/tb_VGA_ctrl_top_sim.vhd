@@ -85,32 +85,30 @@ begin
   
   p_reset : process
   begin
-	s_reset <= '0';
-	wait for 150 ms;
 	s_reset <= '1';
-	wait for 1 ms;
+	wait for 10 ns;
 	s_reset <= '0';
 	wait;
   end process p_reset;
 
   p_input : process
   begin
-    s_pb  <= "0000";
-    s_sw  <= "0000000000000000";  -- pattern1
-    wait for 20 ms;
-    s_sw  <= "0101000000000010";  -- pattern2
-    wait for 20 ms;	
-    s_sw  <= "1010000000000001";  -- mem1	
-    wait for 20 ms;	
-    s_sw  <= "0010000100100011";  -- mem1
-    wait for 20 ms;
-	s_sw  <= "0000000000000100";  -- pattern1 + mem2
+    s_pb <= "0000";
+	s_sw <= "0000000000000100";  -- pattern1 + mem2
 	wait for 20 ms;
-	s_sw  <= "0101000000000110";  -- pattern2 + mem2
+	s_sw <= "0101000000000110";  -- pattern2 + mem2
     wait for 20 ms;
-	s_sw  <= "0111011101100111";  -- mem1 + mem2
+	s_sw <= "0111011101100111";  -- mem1 + mem2
     wait for 20 ms;
-	s_sw  <= "0010000100100101";  -- mem1 + mem2
+	s_sw <= "0010000100100101";  -- mem1 + mem2
+	wait for 20 ms;
+	s_pb <= "1000";
+	wait for 20 ms;
+	s_pb <= "0100";
+	wait for 20 ms;
+	s_pb <= "0010";
+	wait for 20 ms;
+	s_pb <= "0001";
     wait;
   end process p_input;
 

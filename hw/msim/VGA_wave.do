@@ -7,7 +7,7 @@ add wave -noupdate -format Logic /tb_VGA_ctrl/s_v_sync
 add wave -noupdate -format Logic /tb_VGA_ctrl/s_h_sync
 add wave -noupdate -format Logic /tb_VGA_ctrl/s_pixel
 add wave -noupdate -format Logic /tb_VGA_ctrl/s_line
-add wave -noupdate -format Logic /tb_VGA_ctrl/s_rgb
+add wave -noupdate -format Logic /tb_VGA_ctrl/s_rgb_o
 
 
 TreeUpdate [SetDefaultTree]
