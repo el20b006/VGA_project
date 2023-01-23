@@ -10,44 +10,89 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.xpr} [current_project]
+set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
+set_property webtalk.parent_dir {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/impl/VGA_controller_project/VGA_controller_project.cache/wt} [current_project]
+set_property parent.project_path {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/impl/VGA_controller_project/VGA_controller_project.xpr} [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-add_files {{C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/images/Testbild_320x240.coe}}
-add_files {{C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/images/Window_100x100.coe}}
-add_files -quiet {{c:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.srcs/sources_1/ip/rom1/rom1.dcp}}
-set_property used_in_implementation false [get_files {{c:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.srcs/sources_1/ip/rom1/rom1.dcp}}]
-add_files -quiet {{c:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.srcs/sources_1/ip/rom2/rom2.dcp}}
-set_property used_in_implementation false [get_files {{c:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.srcs/sources_1/ip/rom2/rom2.dcp}}]
-add_files -quiet {{c:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp}}
-set_property used_in_implementation false [get_files {{c:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp}}]
+add_files {{C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/images/Testbild_320x240.coe}}
+add_files {{C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/images/Window_100x100.coe}}
+add_files {{C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/sw/VGA_controller/build/mc8051_rom.coe}}
+add_files -quiet {{c:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/generate/artix7_xc7a35tcpg263_1/mc8051_ram/mc8051_ram/mc8051_ram.dcp}}
+set_property used_in_implementation false [get_files {{c:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/generate/artix7_xc7a35tcpg263_1/mc8051_ram/mc8051_ram/mc8051_ram.dcp}}]
+add_files -quiet {{c:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/impl/VGA_controller_project/VGA_controller_project.srcs/sources_1/ip/rom1/rom1.dcp}}
+set_property used_in_implementation false [get_files {{c:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/impl/VGA_controller_project/VGA_controller_project.srcs/sources_1/ip/rom1/rom1.dcp}}]
+add_files -quiet {{c:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/impl/VGA_controller_project/VGA_controller_project.srcs/sources_1/ip/rom2/rom2.dcp}}
+set_property used_in_implementation false [get_files {{c:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/impl/VGA_controller_project/VGA_controller_project.srcs/sources_1/ip/rom2/rom2.dcp}}]
+add_files -quiet {{c:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/impl/VGA_controller_project/VGA_controller_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp}}
+set_property used_in_implementation false [get_files {{c:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/impl/VGA_controller_project/VGA_controller_project.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp}}]
+add_files -quiet {{C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/generate/artix7_xc7a35tcpg263_1/mc8051_rom/mc8051_rom/mc8051_rom.dcp}}
+set_property used_in_implementation false [get_files {{C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/generate/artix7_xc7a35tcpg263_1/mc8051_rom/mc8051_rom/mc8051_rom.dcp}}]
+read_ip -quiet {{C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/generate/artix7_xc7a35tcpg263_1/mc8051_ram/mc8051_ram/mc8051_ram.xci}}
+set_property used_in_implementation false [get_files -all {{c:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/generate/artix7_xc7a35tcpg263_1/mc8051_ram/mc8051_ram/mc8051_ram_ooc.xdc}}]
+set_property is_locked true [get_files {{C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/generate/artix7_xc7a35tcpg263_1/mc8051_ram/mc8051_ram/mc8051_ram.xci}}]
+
 read_vhdl -library xil_defaultlib {
-  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/VGA_ctrl_.vhd}
-  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/source_multiplexer_.vhd}
-  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/pattern_gen_2_.vhd}
-  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/pattern_gen_1_.vhd}
-  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/mem_ctrl_2_.vhd}
-  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/mem_ctrl_1_.vhd}
-  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/io_ctrl_.vhd}
-  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/VGA_ctrl_top_.vhd}
-  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/VGA_ctrl_rtl.vhd}
-  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/source_multiplexer_rtl.vhd}
-  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/pattern_gen_2_rtl.vhd}
-  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/pattern_gen_1_rtl.vhd}
-  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/mem_ctrl_2_rtl.vhd}
-  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/mem_ctrl_1_rtl.vhd}
-  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/io_ctrl_rtl.vhd}
-  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/VGA_ctrl_top_struc.vhd}
-  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/vhdl/VGA_ctrl_top_struc_cfg.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/addsub_cy_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/mc8051_p.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/addsub_ovcy_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/comb_mltplr_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/addsub_core_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/alumux_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/alucore_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/comb_divider_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/addsub_cy_rtl.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/control_mem_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/control_fsm_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/addsub_ovcy_rtl.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/dcml_adjust_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/addsub_core_struc.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/control_mem_rtl.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/comb_divider_rtl.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/alumux_rtl.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/alucore_rtl.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/comb_mltplr_rtl.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/dcml_adjust_rtl.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/mc8051_tmrctr_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/control_fsm_rtl.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/mc8051_control_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/mc8051_alu_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/mc8051_siu_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/mc8051_tmrctr_rtl.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/mc8051_alu_struc.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/mc8051_siu_rtl.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/mc8051_control_struc.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/mc8051_core_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/source_multiplexer_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/VGA_ctrl_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/pattern_gen_2_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/pattern_gen_1_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mem_ctrl_2_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mem_ctrl_1_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/io_ctrl_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/mc8051_top_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/mc8051_core_struc.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/source_multiplexer_rtl.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/VGA_ctrl_top_.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/VGA_ctrl_rtl.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/pattern_gen_2_rtl.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/pattern_gen_1_rtl.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mem_ctrl_2_rtl.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mem_ctrl_1_rtl.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/io_ctrl_rtl.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/mc8051/mc8051_top_struc.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/VGA_ctrl_top_struc.vhd}
+  {C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/vhdl/VGA_ctrl_top_struc_cfg.vhd}
 }
 foreach dcp [get_files -quiet -all *.dcp] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.srcs/constrs_1/new/VGA_ctrl_project.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.srcs/constrs_1/new/VGA_ctrl_project.xdc}}]
+read_xdc {{C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/impl/VGA_controller_project/VGA_controller_project.srcs/constrs_1/new/VGA_ctrl_project.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/impl/VGA_controller_project/VGA_controller_project.srcs/constrs_1/new/VGA_ctrl_project.xdc}}]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 
 synth_design -top VGA_ctrl_top_struc_cfg -part xc7a35tcpg236-1
 

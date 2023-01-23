@@ -22,6 +22,6 @@ vcom ../vhdl/VGA_ctrl_.vhd
 vcom ../vhdl/VGA_ctrl_rtl.vhd
 vcom ../vhdl/VGA_ctrl_rtl_cfg.vhd
 
-vcom ../vhdl/mem_ctrl_1_.vhd
-vcom ../vhdl/mem_ctrl_1_rtl.vhd
-vcom ../vhdl/mem_ctrl_1_rtl_cfg.vhd
+vcom ../vhdl/pattern_gen_1_.vhd
+vcom ../vhdl/pattern_gen_1_rtl.vhd
+vcom ../vhdl/pattern_gen_1_rtl_cfg.vhd

@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
-| Date         : Sun Jan 22 19:34:24 2023
+| Date         : Mon Jan 23 09:16:24 2023
 | Host         : DESKTOP-7DLC06A running 64-bit major release  (build 9200)
 | Command      : report_utilization -file VGA_ctrl_top_struc_cfg_utilization_synth.rpt -pb VGA_ctrl_top_struc_cfg_utilization_synth.pb
 | Design       : VGA_ctrl_top_struc_cfg
@@ -30,14 +30,14 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  367 |     0 |     20800 |  1.76 |
-|   LUT as Logic          |  367 |     0 |     20800 |  1.76 |
+| Slice LUTs*             | 2577 |     0 |     20800 | 12.39 |
+|   LUT as Logic          | 2577 |     0 |     20800 | 12.39 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         |  404 |     0 |     41600 |  0.97 |
-|   Register as Flip Flop |  404 |     0 |     41600 |  0.97 |
+| Slice Registers         |  878 |     0 |     41600 |  2.11 |
+|   Register as Flip Flop |  878 |     0 |     41600 |  2.11 |
 |   Register as Latch     |    0 |     0 |     41600 |  0.00 |
-| F7 Muxes                |    0 |     0 |     16300 |  0.00 |
-| F8 Muxes                |    0 |     0 |      8150 |  0.00 |
+| F7 Muxes                |  111 |     0 |     16300 |  0.68 |
+| F8 Muxes                |   19 |     0 |      8150 |  0.23 |
 +-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -54,10 +54,10 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 19    |          Yes |           - |          Set |
-| 168   |          Yes |           - |        Reset |
+| 43    |          Yes |           - |          Set |
+| 617   |          Yes |           - |        Reset |
 | 1     |          Yes |         Set |            - |
-| 216   |          Yes |       Reset |            - |
+| 217   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -149,18 +149,20 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  216 |        Flop & Latch |
-| LUT6     |  181 |                 LUT |
-| FDCE     |  168 |        Flop & Latch |
-| LUT4     |  113 |                 LUT |
-| CARRY4   |   73 |          CarryLogic |
-| LUT2     |   65 |                 LUT |
-| LUT5     |   54 |                 LUT |
-| LUT3     |   45 |                 LUT |
+| LUT6     | 1562 |                 LUT |
+| FDCE     |  617 |        Flop & Latch |
+| LUT5     |  560 |                 LUT |
+| LUT4     |  363 |                 LUT |
+| LUT2     |  274 |                 LUT |
+| LUT3     |  234 |                 LUT |
+| FDRE     |  217 |        Flop & Latch |
+| MUXF7    |  111 |               MuxFx |
+| CARRY4   |  101 |          CarryLogic |
+| FDPE     |   43 |        Flop & Latch |
+| LUT1     |   22 |                 LUT |
 | IBUF     |   21 |                  IO |
-| FDPE     |   19 |        Flop & Latch |
+| MUXF8    |   19 |               MuxFx |
 | OBUF     |   14 |                  IO |
-| LUT1     |   10 |                 LUT |
 | FDSE     |    1 |        Flop & Latch |
 +----------+------+---------------------+
 
@@ -168,13 +170,15 @@ Table of Contents
 8. Black Boxes
 --------------
 
-+-----------+------+
-|  Ref Name | Used |
-+-----------+------+
-| rom2      |    1 |
-| rom1      |    1 |
-| clk_wiz_0 |    1 |
-+-----------+------+
++------------+------+
+|  Ref Name  | Used |
++------------+------+
+| rom2       |    1 |
+| rom1       |    1 |
+| mc8051_rom |    1 |
+| mc8051_ram |    1 |
+| clk_wiz_0  |    1 |
++------------+------+
 
 
 9. Instantiated Netlists

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.runs/synth_1'
+HD_PWD='C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/impl/VGA_controller_project/VGA_controller_project.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

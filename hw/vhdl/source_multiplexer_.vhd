@@ -50,6 +50,10 @@ entity source_multiplexer is
         pat2_rgb_i  : in  std_logic_vector(11 downto 0);  -- rgb values
         mem1_rgb_i  : in  std_logic_vector(11 downto 0);  -- rgb values
         mem2_rgb_i  : in  std_logic_vector(11 downto 0);  -- rgb values
+		p0_i        : in  std_logic_vector(7 downto 0);   -- software input
+		p1_i        : in  std_logic_vector(7 downto 0);   -- software input
+		p2_i        : in  std_logic_vector(7 downto 0);   -- software input
+		p3_i        : in  std_logic_vector(7 downto 0);   -- software input
         rgb_o       : out std_logic_vector(11 downto 0);  -- rgb output
 		line_beg_o  : out std_logic_vector(9 downto 0);   -- 1st line move
 		line_end_o  : out std_logic_vector(9 downto 0);   -- last line move	

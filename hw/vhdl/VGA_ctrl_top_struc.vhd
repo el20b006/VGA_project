@@ -120,11 +120,15 @@ architecture struc of VGA_ctrl_top is
          pat2_rgb_i  : in  std_logic_vector(11 downto 0);  -- rgb values
          mem1_rgb_i  : in  std_logic_vector(11 downto 0);  -- rgb values
          mem2_rgb_i  : in  std_logic_vector(11 downto 0);  -- rgb values
+		 p0_i        : in  std_logic_vector(7 downto 0);   -- software input
+	 	 p1_i        : in  std_logic_vector(7 downto 0);   -- software input
+		 p2_i        : in  std_logic_vector(7 downto 0);   -- software input
+		 p3_i        : in  std_logic_vector(7 downto 0);   -- software input
          rgb_o       : out std_logic_vector(11 downto 0);  -- rgb output
-		 pixel_beg_o : out std_logic_vector(9 downto 0);
-		 pixel_end_o : out std_logic_vector(9 downto 0);
-		 line_beg_o  : out std_logic_vector(9 downto 0);
-		 line_end_o  : out std_logic_vector(9 downto 0)
+		 pixel_beg_o : out std_logic_vector(9 downto 0);   -- first pixel
+		 pixel_end_o : out std_logic_vector(9 downto 0);   -- last pixel
+		 line_beg_o  : out std_logic_vector(9 downto 0);   -- first line
+		 line_end_o  : out std_logic_vector(9 downto 0)    -- last line
         );	
   end component;
   
@@ -158,6 +162,14 @@ architecture struc of VGA_ctrl_top is
   signal s_pixel_end   : std_logic_vector(9 downto 0);   -- last pixel
   signal s_line_beg    : std_logic_vector(9 downto 0);   -- first line
   signal s_line_end    : std_logic_vector(9 downto 0);   -- last line
+  -- singals for MC8051
+  signal s_locked      : std_logic;
+  signal s_sync_locked : std_logic_vector(2 downto 0);
+  signal s_reset_8051  : std_logic; 
+  signal s_p0          : std_logic_vector(7 downto 0);
+  signal s_p1          : std_logic_vector(7 downto 0);
+  signal s_p2          : std_logic_vector(7 downto 0);
+  signal s_p3          : std_logic_vector(7 downto 0);
   
   
 begin
@@ -170,6 +182,29 @@ begin
      clk_out3 => s_clk_25M
     );
 
+  -- instantiate the mc8051
+  i_mc8051_top : mc8051_top
+  port map 
+    (reset     => reset_i,
+     int0_i    => (others => '1'), -- not used in this design
+     int1_i    => (others => '1'), -- not used in this design
+     all_t0_i  => (others => '0'), -- not used in this design
+     all_t1_i  => (others => '0'), -- not used in this design
+     all_rxd_i => (others => '0'), -- not used in this design
+     all_rxd_o => open,            -- not used in this design
+     all_txd_o => open,            -- not used in this design  
+     clk       => s_clk_25M,
+     p0_i      => (others => '0'), -- not used in this design
+     p1_i      => (others => '0'), -- not used in this design
+     p2_i      => (others => '0'), -- not used in this design
+     p3_i      => (others => '0'), -- not used in this design
+     p0_o      => s_p0,            
+     p1_o      => s_p1,         
+     p2_o      => s_p2,
+     p3_o      => s_p3,             
+     test_o    => open             -- not used in this design
+    );
+  
   -- Instantiate the io_ctrl unit
   i_io_ctrl : io_ctrl
   port map
@@ -240,6 +275,10 @@ begin
 	 pat2_rgb_i  => s_pat2_rgb,
 	 mem1_rgb_i  => s_mem1_rgb,
 	 mem2_rgb_i  => s_mem2_rgb,
+	 p0_i        => s_p0,
+	 p1_i        => s_p1,
+	 p2_i        => s_p2,
+	 p3_i        => s_p3,
 	 rgb_o       => s_rgb,
 	 line_beg_o  => s_line_beg,
 	 line_end_o  => s_line_end,

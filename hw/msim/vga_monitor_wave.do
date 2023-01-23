@@ -1,14 +1,13 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate -format Logic /vga_monitor_top/reset
-add wave -noupdate -format Logic /vga_monitor_top/clk
-add wave -noupdate -format Logic /vga_monitor_top/enable
-add wave -noupdate -format Logic /vga_monitor_top/pixel_count
-add wave -noupdate -format Logic /vga_monitor_top/line_count
-add wave -noupdate -format Logic /vga_monitor_top/rgb
-add wave -noupdate -format Logic /vga_monitor_top/h_sync
-add wave -noupdate -format Logic /vga_monitor_top/v_sync
-add wave -noupdate -format Logic /vga_monitor_top/rgb_output
+add wave -noupdate -format Logic /vga_monitor_top/s_reset
+add wave -noupdate -format Logic /vga_monitor_top/s_enable
+add wave -noupdate -format Logic /vga_monitor_top/s_pixel_count
+add wave -noupdate -format Logic /vga_monitor_top/s_line_count
+add wave -noupdate -format Logic /vga_monitor_top/s_rgb
+add wave -noupdate -format Logic /vga_monitor_top/s_h_sync
+add wave -noupdate -format Logic /vga_monitor_top/s_v_sync
+add wave -noupdate -format Logic /vga_monitor_top/s_rgb_output
 
 TreeUpdate [SetDefaultTree]
 WaveRestoreCursors {0 ps}

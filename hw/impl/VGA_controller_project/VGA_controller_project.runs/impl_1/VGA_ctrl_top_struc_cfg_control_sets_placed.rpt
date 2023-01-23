@@ -1,0 +1,103 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.1 (win64) Build 1538259 Fri Apr  8 15:45:27 MDT 2016
+| Date         : Mon Jan 23 09:18:29 2023
+| Host         : DESKTOP-7DLC06A running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file VGA_ctrl_top_struc_cfg_control_sets_placed.rpt
+| Design       : VGA_ctrl_top_struc_cfg
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    50 |
+| Unused register locations in slices containing registers |   126 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               5 |            4 |
+| No           | No                    | Yes                    |             387 |          199 |
+| No           | Yes                   | No                     |              24 |            9 |
+| Yes          | No                    | No                     |              96 |           27 |
+| Yes          | No                    | Yes                    |             273 |          115 |
+| Yes          | Yes                   | No                     |             113 |           35 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------------------+-----------------------------------------------------------------------------------+-----------------------------------+------------------+----------------+
+|        Clock Signal        |                                   Enable Signal                                   |          Set/Reset Signal         | Slice Load Count | Bel Load Count |
++----------------------------+-----------------------------------------------------------------------------------+-----------------------------------+------------------+----------------+
+|  i_clk_wiz_0/inst/clk_out1 |                                                                                   |                                   |                2 |              2 |
+|  i_clk_wiz_0/inst/clk_out3 |                                                                                   |                                   |                2 |              3 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/gen_mc8051_siu[0].i_mc8051_siu/s_recv_state[3]_i_1_n_0 | reset_i_IBUF                      |                1 |              4 |
+|  i_clk_wiz_0/inst/clk_out1 | i_io_ctrl/swsync_o0                                                               | reset_i_IBUF                      |                2 |              4 |
+|  i_clk_wiz_0/inst/clk_out1 | i_io_ctrl/s_pb_buff0                                                              |                                   |                1 |              4 |
+|  i_clk_wiz_0/inst/clk_out1 | i_io_ctrl/pbsync_o0                                                               | reset_i_IBUF                      |                1 |              4 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/gen_mc8051_siu[0].i_mc8051_siu/s_tran_state[3]_i_1_n_0 | reset_i_IBUF                      |                1 |              4 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/i_mc8051_control/i_control_mem/pcon[3]_i_1_n_0         | reset_i_IBUF                      |                3 |              5 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/i_mc8051_control/i_control_mem/s_txpre_count_reg[5][0] | reset_i_IBUF                      |                3 |              6 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/i_mc8051_control/i_control_mem/E[0]                    | reset_i_IBUF                      |                1 |              6 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/i_mc8051_control/i_control_mem/s_counth1_reg[7][0]     | reset_i_IBUF                      |                3 |              8 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/i_mc8051_control/i_control_mem/s_countl0_reg[7]_0[0]   | reset_i_IBUF                      |                4 |              8 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/i_mc8051_control/i_control_mem/s_countl1_reg[7][0]     | reset_i_IBUF                      |                3 |              8 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/i_mc8051_control/i_control_mem/dph[7]_i_1_n_0          | reset_i_IBUF                      |                3 |              8 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/i_mc8051_control/i_control_mem/dpl[7]_i_1_n_0          | reset_i_IBUF                      |                2 |              8 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/i_mc8051_control/i_control_mem/s_help[7]_i_1_n_0       | reset_i_IBUF                      |                6 |              8 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/i_mc8051_control/i_control_mem/s_r0_b0[7]_i_1_n_0      | reset_i_IBUF                      |                1 |              8 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/i_mc8051_control/i_control_mem/s_r0_b1[7]_i_1_n_0      | reset_i_IBUF                      |                1 |              8 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/i_mc8051_control/i_control_mem/s_r0_b2[7]_i_1_n_0      | reset_i_IBUF                      |                1 |              8 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/i_mc8051_control/i_control_mem/s_r0_b3[7]_i_1_n_0      | reset_i_IBUF                      |                6 |              8 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/i_mc8051_control/i_control_mem/s_r1_b0[7]_i_1_n_0      | reset_i_IBUF                      |                4 |              8 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/i_mc8051_control/i_control_mem/s_r1_b1[7]_i_1_n_0      | reset_i_IBUF                      |                2 |              8 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/i_mc8051_control/i_control_mem/s_r1_b2[7]_i_1_n_0      | reset_i_IBUF                      |                2 |              8 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/i_mc8051_control/i_control_mem/s_r1_b3[7]_i_1_n_0      | reset_i_IBUF                      |                3 |              8 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/i_mc8051_control/i_control_mem/sp[7]_i_1_n_0           | reset_i_IBUF                      |                8 |              8 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/i_mc8051_control/i_control_mem/ssel[7]_i_1_n_0         | reset_i_IBUF                      |                3 |              8 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/i_mc8051_control/i_control_mem/tmod[0][7]_i_1_n_0      | reset_i_IBUF                      |                2 |              8 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/i_mc8051_control/i_control_mem/tsel[7]_i_1_n_0         | reset_i_IBUF                      |                2 |              8 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/i_mc8051_control/i_control_mem/s_counth0_reg[7][0]     | reset_i_IBUF                      |                3 |              8 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/i_mc8051_control/i_control_mem/s_reload[0][7]_i_1_n_0  | reset_i_IBUF                      |                2 |             10 |
+|  i_clk_wiz_0/inst/clk_out3 | i_VGA_ctrl/s_line_count[9]_i_1_n_0                                                | reset_i_IBUF                      |                4 |             10 |
+|  i_clk_wiz_0/inst/clk_out3 |                                                                                   | i_VGA_ctrl/SR[0]                  |                4 |             12 |
+|  i_clk_wiz_0/inst/clk_out3 |                                                                                   | i_mem_ctrl_2/rgb_o[11]_i_1__0_n_0 |                5 |             12 |
+|  i_clk_wiz_0/inst/clk_out1 | i_source_multiplexer/rgb_o[11]_i_1__1_n_0                                         | reset_i_IBUF                      |                7 |             12 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mem_ctrl_2/s_count[0]_i_2_n_0                                                   | i_mem_ctrl_2/s_count[0]_i_1_n_0   |                4 |             14 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mem_ctrl_2/s_rom_addr                                                           | reset_i_IBUF                      |                3 |             14 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mc8051_top/i_mc8051_core/i_mc8051_control/i_control_mem/s_help16[15]_i_1_n_0    | reset_i_IBUF                      |                8 |             16 |
+|  i_clk_wiz_0/inst/clk_out1 | i_io_ctrl/s_sw_buff0                                                              |                                   |                3 |             16 |
+|  i_clk_wiz_0/inst/clk_out1 | i_clk_wiz_0/inst/clk_out3                                                         |                                   |                5 |             16 |
+|  i_clk_wiz_0/inst/clk_out3 | i_VGA_ctrl/s_count3                                                               | i_mem_ctrl_1/s_count3[0]_i_1_n_0  |                5 |             17 |
+|  i_clk_wiz_0/inst/clk_out3 | i_VGA_ctrl/E[0]                                                                   | reset_i_IBUF                      |                8 |             17 |
+|  i_clk_wiz_0/inst/clk_out3 | i_VGA_ctrl/s_count4                                                               | i_mem_ctrl_1/s_count4[0]_i_1_n_0  |                5 |             17 |
+|  i_clk_wiz_0/inst/clk_out3 | i_VGA_ctrl/s_count2                                                               | i_mem_ctrl_1/s_count2[0]_i_1_n_0  |                5 |             17 |
+|  i_clk_wiz_0/inst/clk_out3 | i_VGA_ctrl/s_count1                                                               | i_mem_ctrl_1/s_count1[0]_i_1_n_0  |                5 |             17 |
+|  i_clk_wiz_0/inst/clk_out3 | i_mem_ctrl_2/i_source_multiplexer/p_3_in                                          |                                   |                5 |             20 |
+|  i_clk_wiz_0/inst/clk_out1 | i_source_multiplexer/s_line_end                                                   | reset_i_IBUF                      |               11 |             20 |
+|  i_clk_wiz_0/inst/clk_out1 | i_source_multiplexer/s_pixel_end_0                                                | reset_i_IBUF                      |               12 |             20 |
+|  i_clk_wiz_0/inst/clk_out1 | i_source_multiplexer/pixel_beg_o0                                                 |                                   |               13 |             40 |
+|  i_clk_wiz_0/inst/clk_out1 |                                                                                   | reset_i_IBUF                      |               23 |             74 |
+|  i_clk_wiz_0/inst/clk_out3 |                                                                                   | reset_i_IBUF                      |              176 |            313 |
++----------------------------+-----------------------------------------------------------------------------------+-----------------------------------+------------------+----------------+
+
+

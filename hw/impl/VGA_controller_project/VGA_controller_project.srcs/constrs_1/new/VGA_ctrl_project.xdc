@@ -72,3 +72,6 @@ set_property PACKAGE_PIN N18 [get_ports {rgb_o[0]}]
 set_property PACKAGE_PIN L18 [get_ports {rgb_o[1]}]
 set_property PACKAGE_PIN K18 [get_ports {rgb_o[2]}]
 set_property PACKAGE_PIN J18 [get_ports {rgb_o[3]}]
+
+set_property PACKAGE_PIN W5 [get_ports clk_i]
+set_property IOSTANDARD LVCMOS33 [get_ports clk_i]

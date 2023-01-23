@@ -1,0 +1,4 @@
+vhdl xpm "C:/Xilinx/Vivado/2016.1/data/ip/xpm/xpm_VCOMP.vhd" 
+vhdl xil_defaultlib "../../../../../../generate/artix7_xc7a35tcpg263_1/mc8051_rom/mc8051_rom/mc8051_rom_sim_netlist.vhdl" 
+
+nosort

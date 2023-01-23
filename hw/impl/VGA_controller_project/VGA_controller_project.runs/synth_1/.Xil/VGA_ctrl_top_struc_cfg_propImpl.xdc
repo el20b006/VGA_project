@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:{C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/impl/VGA_controller_project/VGA_controller_project.srcs/constrs_1/new/VGA_ctrl_project.xdc} rfile:../../../VGA_controller_project.srcs/constrs_1/new/VGA_ctrl_project.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:{C:/Users/sarah/OneDrive/Dokumente/FH/5. Sem/CHIP/Froeler_Project/hw/impl/VGA_controller_project/VGA_controller_project.srcs/constrs_1/new/VGA_ctrl_project.xdc} rfile:../../../VGA_controller_project.srcs/constrs_1/new/VGA_ctrl_project.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN T17 [get_ports {pb_i[0]}]
 set_property src_info {type:XDC file:1 line:9 export:INPUT save:INPUT read:READ} [current_design]
@@ -69,3 +69,5 @@ set_property src_info {type:XDC file:1 line:73 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN K18 [get_ports {rgb_o[2]}]
 set_property src_info {type:XDC file:1 line:74 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN J18 [get_ports {rgb_o[3]}]
+set_property src_info {type:XDC file:1 line:76 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN W5 [get_ports clk_i]
